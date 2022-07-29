@@ -6,7 +6,7 @@ import path from "path";
 import db from "./models"
 
 const app = express();
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 5001;
 
 app.use(cookieParser());
 app.use(express.urlencoded({extended: true}));
@@ -18,6 +18,7 @@ app.use(
     cors({
         origin: [
             'http://localhost:3000',
+            'https://stacksolution.co'
         ],
         credentials: true,
     })
